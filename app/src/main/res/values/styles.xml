@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+    </style>
+<!--
+    <style name="button" parent="@android:style/Widget.Button">
+        <item name="com.my.package:font">fonts/copperplate_gothic_light.TTF</item>
+    </style>
+    -->
+</resources>
