@@ -39,7 +39,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //context = this;
-
         //text = (TextView) findViewById(R.id.textView1);
         //Typeface face = Typeface.createFromAsset(getAssets(),"fonts/Comfortaa-Bold.ttf");
         //text.setTypeface(face);
@@ -47,7 +46,6 @@ public class MainActivity extends Activity {
         logo = (ImageView) findViewById(R.id.imageView1);
         //logo.setBackgroundColor(Color.rgb(0, 127, 255));
         logo.setBackgroundColor(Color.rgb(56, 165, 219));
-
 
         myWebView = (WebView) findViewById(R.id.webview);
 
@@ -67,6 +65,7 @@ public class MainActivity extends Activity {
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
 
+
         myWebView.setWebViewClient(new MyWebViewClient());
         //myWebView.setWebChromeClient(new MyWebChromeClient());
         myWebView.setWebChromeClient(new WebChromeClient());
@@ -74,7 +73,6 @@ public class MainActivity extends Activity {
         if(haveNetworkConnection()){
             myWebView.loadUrl(URL);
         } else {
-
            toast = Toast.makeText(getApplicationContext(), "Unable to connect to Server. " +
                             "Please check your Internet connection and try again",
                     Toast.LENGTH_LONG);
@@ -88,7 +86,7 @@ public class MainActivity extends Activity {
         @Override
         public void run() {
             try {
-                Thread.sleep(3500); // As I am using LENGTH_LONG in Toast
+                Thread.sleep(2500); // As I am using LENGTH_LONG in Toast
                 MainActivity.this.finish();
             } catch (Exception e) {
                 e.printStackTrace();
